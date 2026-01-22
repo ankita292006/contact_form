@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Contact Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="wrapper">
+    <section class="form-card">
+        <h1>Contact Us</h1>
+        <p class="subtitle">We’d love to hear from you</p>
+
+        <!-- 🔹 FormsFree Action URL -->
+        <form 
+            action="https://formspree.io/f/xnjjzlda"
+            method="POST">
+
+            <!-- Hidden settings -->
+            <input type="hidden" name="_subject" value="New Contact Form Message">
+            <input type="hidden" name="_captcha" value="false">
+
+            <!-- Personal Info -->
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <div class="field">
+                    <input type="text" name="name" required minlength="3" placeholder=" ">
+                    <label>Full Name</label>
+                </div>
+
+                <div class="field">
+                    <input type="email" name="email" required placeholder=" ">
+                    <label>Email Address</label>
+                </div>
+
+                <div class="field">
+                    <input type="tel" name="phone" required pattern="[0-9]{10}" placeholder=" ">
+                    <label>Phone Number</label>
+                    <small>10 digits only</small>
+                </div>
+            </fieldset>
+
+            <!-- Message -->
+            <fieldset>
+                <legend>Your Message</legend>
+
+                <div class="field">
+                    <textarea name="message" required maxlength="200" rows="4" placeholder=" "></textarea>
+                    <label>Message</label>
+                    <small>Max 200 characters</small>
+                </div>
+            </fieldset>
+
+            <button type="submit">Send Message</button>
+
+        </form>
+    </section>
+</main>
+
+</body>
+</html>
